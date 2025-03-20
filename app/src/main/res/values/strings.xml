@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Application1</string>
+    <string name="welcome_text"> Welcome to my app</string>
+    <string name="button1"> Go to Activity2</string>
+    <string name="editText"> Text sended</string>
+    <string name="button2"> Go back </string>
+
+</resources>
