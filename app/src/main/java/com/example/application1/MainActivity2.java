@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity2 extends AppCompatActivity {
     Button button2;
-    TextView texte;
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +30,23 @@ public class MainActivity2 extends AppCompatActivity {
 
         });
 
-        texte = findViewById(R.id.textView);
+        text = findViewById(R.id.textView);
 
 
 
         // Récupération du bouton
         button2 = findViewById(R.id.button2);
+        button2.setText(R.string.button2);
 
 
         // Récupération du texte
-
         String reception = getIntent().getStringExtra("text_key");
-        texte.setText("texte reçu : " +  reception);
+
+
+        // Utilisation de la chaîne localisée pour afficher "Texte reçu : " (ou "Text received :") selon la langue
+        String receivedText = getString(R.string.text) + reception;
+
+        text.setText(receivedText); // Affichage du texte dans le TextView
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

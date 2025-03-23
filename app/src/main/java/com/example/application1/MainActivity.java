@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
         });
         // Récupération du bouton
         button1 = findViewById(R.id.button);
+        button1.setText(R.string.button1);
+
         editText = findViewById(R.id.editTextText);
+        editText.setText(R.string.editText);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 intent.putExtra("text_key" , inputext);
                 startActivity(intent); // Lancement de la nouvelle activité
+
             }
         });
 
